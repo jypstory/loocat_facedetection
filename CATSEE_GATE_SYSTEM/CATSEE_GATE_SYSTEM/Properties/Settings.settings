@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CATSEE_GATE_SYSTEM.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="sqlUrlRemote" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server = 218.38.221.109; database = LLI; uid = uhc; pwd = uhc;Character Set=utf8</Value>
+    </Setting>
+    <Setting Name="sqlUrlLocal" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server = localhost; database = LC; uid = root; pwd = 1q2w3e</Value>
+    </Setting>
+    <Setting Name="runMode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">local</Value>
+    </Setting>
+    <Setting Name="dataRootDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\myWorkspace\catsee\data</Value>
+    </Setting>
+    <Setting Name="activeKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">F075PNIdg6xLbhgWfvsq+/Vcumdcafw3cDqAbPf+6ehQssjK9oJX89mgM+VlBqAbx6caRieef41Zp5pBfoaCk7ROER/LMiA7n1Ev8GyzVytzNud23jR669meIwZLNCpMltCL5mZzK2vWZNATa826CKaLqkoDFTn+mtsx+vwDGoQ=</Value>
+    </Setting>
+    <Setting Name="trackerMemoryFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">tracker.dat</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

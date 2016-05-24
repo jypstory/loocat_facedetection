@@ -1,0 +1,284 @@
+CREATE DATABASE CATGATE;
+
+drop table CATGATE.TBLOGIN;
+CREATE TABLE CATGATE.TBLOGIN (
+ID varchar(30) NOT NULL,
+PW varchar(30) NOT NULL,
+USER_NAME varchar(30) NOT NULL,
+USER_PHONE varchar(30),
+USER_GUBUN varchar(2) NOT NULL,
+CREATE_DATE NOT NULL,
+MODIFY_DATE NOT NULL,
+CONSTRAINT TBLLOGIN_PK PRIMARY KEY (ID)
+);
+
+
+
+SET character_set_database = utf8;
+SET character_set_client = utf8;
+SET character_set_results = utf8;
+SET character_set_connection = utf8;
+SET character_set_server = utf8;
+
+alter database CATGATE default character set = utf8;
+
+drop table LLI.TBLOGIN;
+CREATE TABLE LLI.TBLOGIN (
+ID varchar(30) NOT NULL,
+PW varchar(30) NOT NULL,
+USER_NAME varchar(30) NOT NULL,
+USER_PHONE varchar(30) ,
+USER_GUBUN varchar(2) NOT NULL,
+CONSTRAINT TBLLOGIN_PK PRIMARY KEY (ID)
+);
+
+drop table LLI.TBCODEETC;
+CREATE TABLE LLI.TBCODEETC (
+CD_MODULE VARCHAR(20) NOT NULL,
+TP_CODE VARCHAR(20) NOT NULL,
+NM_TPCODE VARCHAR(20),
+CD_CODE VARCHAR(20) NOT NULL,
+NM_CODE VARCHAR(20) ,
+NM_CODEEN VARCHAR(20) ,
+NM_CODEETC VARCHAR(20) ,
+CD_FLAG1 VARCHAR(20) ,
+CD_FLAG2 VARCHAR(20) ,
+DC_RMK VARCHAR(200) ,
+DTS_INSERT VARCHAR(20) ,
+ID_INSERT VARCHAR(20) ,
+DTS_UPDATE VARCHAR(20) ,
+ID_UPDATE VARCHAR(20) ,
+CONSTRAINT TBCODEETC_PK PRIMARY KEY (CD_MODULE, TP_CODE, CD_CODE)
+);
+
+INSERT INTO LLI.TBLOGIN VALUES ('admin','admin','관리자','01011111111','01'); 
+INSERT INTO LLI.TBLOGIN VALUES ('admin1','admin1','관리자1','01011111111','01'); 
+INSERT INTO LLI.TBLOGIN VALUES ('admin2','admin2','관리자2','01011111111','01'); 
+INSERT INTO LLI.TBLOGIN VALUES ('admin3','admin3','관리자3','01011111111','01'); 
+INSERT INTO LLI.TBLOGIN VALUES ('user','user','일반사용자','01022222222','02' ); 
+
+INSERT INTO LLI.TBCODEETC VALUES('10','01','시대구분','00','','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','01','시대구분','01','전통시대','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','01','시대구분','02','개항기','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','01','시대구분','03','일제강점기','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','01','시대구분','04','해방이후','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','01','시대구분','05','기타','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','02','지역구분','00','','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','02','지역구분','01','중구','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','02','지역구분','02','동구','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','02','지역구분','03','남구','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','02','지역구분','04','연수구','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','02','지역구분','05','남동구','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','02','지역구분','06','부평구','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','02','지역구분','07','계양구','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','02','지역구분','08','서구','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','02','지역구분','09','강화군','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','02','지역구분','10','옹진군','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','02','지역구분','11','기타','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','03','분류코드','00','','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','03','분류코드','01','민속','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','03','분류코드','02','지명','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','03','분류코드','03','인물','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','03','분류코드','04','사회단체','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','03','분류코드','05','건축','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','03','분류코드','06','역사(사건)','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','03','분류코드','07','예술(작품)','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','03','분류코드','08','신문기사','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','03','분류코드','09','엽서','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','03','분류코드','10','지도','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','03','분류코드','11','사진','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','03','분류코드','12','도판','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','03','분류코드','13','기타','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0000','','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0100','','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0200','','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0300','','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0400','','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0500','','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0600','','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0700','','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0800','','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0900','','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','1000','','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0101','중앙동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0102','해안동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0103','관동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0104','항동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0105','송학동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0106','사동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0107','신생동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0108','신포동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0109','답동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0110','신흥동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0111','선화동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0112','유동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0113','율목동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0114','도원동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0115','내동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0116','경동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0117','용동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0118','인현동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0119','전동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0120','북성동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0121','선린동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0122','송월동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0123','중산동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0124','운남동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0125','운서동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0126','운북동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0127','을왕동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0128','남북동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0139','덕교동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0130','무의동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0201','만석동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0202','화수동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0203','송현동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0204','화평동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0205','창영동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0206','금곡동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0207','송림동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0301','숭의동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0302','용현동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0303','학익동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0304','도화동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0305','주안동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0306','관교동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0307','문학동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0401','옥련동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0402','선학동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0403','연수동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0404','청학동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0405','동춘동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0406','송도동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0501','구월동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0502','간석동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0503','만수동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0504','장수동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0505','서창동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0506','운연동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0507','남촌동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0508','수산동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0509','도림동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0510','논현동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0511','고잔동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0601','부평동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0602','십정동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0603','산곡동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0604','청천동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0605','삼산동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0606','갈산동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0607','부개동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0608','일신동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0609','구산동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0701','효성동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0702','계산동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0703','작전동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0704','서운동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0705','임학동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0706','용종동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0707','병방동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0708','방축동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0709','박촌동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0710','동양동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0711','귤현동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0712','상야동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0713','하야동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0714','평동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0715','노오지동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0716','선주지동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0717','이화동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0718','오류동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0719','갈현동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0720','둑실동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0721','목상동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0722','다남동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0723','장기동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0801','백석동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0802','시천동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0803','검암동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0804','경서동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0805','공촌동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0806','연희동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0807','심곡동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0808','가정동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0809','신현동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0810','석남동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0811','원창동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0812','가좌동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0813','마전동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0814','당하동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0815','원당동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0816','대곡동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0817','금곡동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0818','오류동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0819','왕길동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0820','불로동','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0901','강화읍','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0902','선원면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0903','불은면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0904','길상면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0905','화도면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0906','양도면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0907','내가면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0908','하점면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0909','양사면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0910','송해면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0911','교동면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0912','삼산면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','0913','서도면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','1001','북도면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','1002','백령면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','1003','대청면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','1004','덕적면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','1005','영흥면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','1006','자월면','','','','','','','','',''); 
+INSERT INTO LLI.TBCODEETC VALUES('10','04','지역구분상세','1007','연평면','','','','','','','','',''); 
+
+
+drop table LLI.TBLIB);
+CREATE TABLE LLI.TBLIB (
+ CD_MODULE  VARCHAR(10) NOT NULL
+,CD_CODE1 VARCHAR(10) NOT NULL
+,NO_ITEM VARCHAR(20) NOT NULL
+,NM_ITEMKR  VARCHAR(2000)
+,NM_ITEMEN  VARCHAR(2000)
+,NM_ITEMETC VARCHAR(2000)
+,TP_ERA  VARCHAR(2000)
+,TP_AREA VARCHAR(500)
+,TP_AREA_DTL VARCHAR(500)
+,NM_KOR  VARCHAR(2000)
+,DT_CRTD VARCHAR(1000)
+,TXT_DESC TEXT
+,TP_SOURCE  VARCHAR(2000)
+,DC_PLACE VARCHAR(2000)
+,DTS_INSERT VARCHAR(20)
+,ID_INSERT  VARCHAR(20)
+,DTS_UPDATE VARCHAR(20)
+,ID_UPDATE  VARCHAR(20)
+,CONSTRAINT TBLIB_PK PRIMARY KEY (CD_MODULE,CD_CODE1,NO_ITEM)
+ );
+
+
+drop table LLI.TBATTACH;
+CREATE TABLE LLI.TBATTACH (
+ CD_MODULE VARCHAR(10) NOT NULL
+,CD_CODE1 VARCHAR(10) NOT NULL
+,NO_ITEM VARCHAR(20) NOT NULL
+,TP_SOURCE VARCHAR(1000)
+,TP_ATTACH VARCHAR(1000)
+,NO_ATTACH BIGINT NOT NULL
+,NM_ATTACH VARCHAR(1000)
+,NM_FILE VARCHAR(1000)
+,DC_RMK  TEXT
+,DC_RMK2 VARCHAR(1000)
+,DTS_INSERT VARCHAR(20)
+,ID_INSERT VARCHAR(20)
+,DTS_UPDATE VARCHAR(20)
+,ID_UPDATE VARCHAR(20)
+,CONSTRAINT TBATTACH_PK PRIMARY KEY (CD_MODULE,CD_CODE1,NO_ITEM,NO_ATTACH)
+);
+
+drop table LLI.NOTI;
+CREATE TABLE LLI.NOTI (
+NOTI_TXT TEXT
+);

@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2860CDF1-C45D-428F-B89B-D03FD135E411}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CATSEE_GATE_SYSTEM</RootNamespace>
+    <AssemblyName>CATSEE_GATE_SYSTEM</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FaceSDK.NET, Version=6.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\FaceSDK.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="IrisSkin4">
+      <HintPath>..\..\..\..\Users\josh\Documents\irisskin_exe_demo\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>library\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config.cs" />
+    <Compile Include="dbConn_mysql.cs" />
+    <Compile Include="AdminAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAddForm.Designer.cs">
+      <DependentUpon>AdminAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminListForm.Designer.cs">
+      <DependentUpon>AdminListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnterModeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterModeForm.Designer.cs">
+      <DependentUpon>EnterModeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPCamForm_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPCamForm_new.Designer.cs">
+      <DependentUpon>IPCamForm_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalCamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalCamForm.Designer.cs">
+      <DependentUpon>LocalCamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisitorListForm.Designer.cs">
+      <DependentUpon>VisitorListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorVideoCapture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisitorVideoCapture.Designer.cs">
+      <DependentUpon>VisitorVideoCapture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisitorAddForm.Designer.cs">
+      <DependentUpon>VisitorAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminAddForm.resx">
+      <DependentUpon>AdminAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminListForm.resx">
+      <DependentUpon>AdminListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterModeForm.resx">
+      <DependentUpon>EnterModeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPCamForm_new.resx">
+      <DependentUpon>IPCamForm_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="LocalCamForm.resx">
+      <DependentUpon>LocalCamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisitorAddForm.resx">
+      <DependentUpon>VisitorAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisitorListForm.resx">
+      <DependentUpon>VisitorListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisitorVideoCapture.resx">
+      <DependentUpon>VisitorVideoCapture.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Refrence_LLISYSTEM\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\images\sk_logo.gif" />
+    <Content Include="FaceSDK.NET.dll" />
+    <Content Include="Resources\123.jpg" />
+    <None Include="Resources\loocathome.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
