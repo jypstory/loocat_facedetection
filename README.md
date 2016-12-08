@@ -1,1 +1,1 @@
-# loocat_facedetection
+# loocat_face recognition
